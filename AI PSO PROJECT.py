@@ -21,7 +21,7 @@ class individual():
 
     def __init__(self, length, w, max_wieght):  # constructor
         average = round(sum(w)/length)
-        rand = round(max_wieght/average)
+        rand = round((max_wieght/average)*1.5)
         listt = [randint(0, rand) for x in range(length)]
         self.position = listt
 
@@ -103,6 +103,6 @@ w = [24, 10, 10, 7]
 v = [24, 18, 18, 10]
 max_wieght = 25
 lenght = 4
-count = 1
-max_iteration = 5
+count = 30
+max_iteration = 16
 z = PSO(v, w, max_wieght, lenght, count, max_iteration)
